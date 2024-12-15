@@ -25,8 +25,8 @@ namespace DataLayer
             if (where != null)
                 query = query.Where(where);
 
-            if (sort != null)
-                query = query.OrderBy(sort);
+            if (orderby != null)
+                query = orderby(query);
 
             if (includes != "")
             {

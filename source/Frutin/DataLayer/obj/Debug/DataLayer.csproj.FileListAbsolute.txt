@@ -5,7 +5,6 @@ D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\bin\Debug\EntityFrame
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\bin\Debug\EntityFramework.xml
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
-D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.dll

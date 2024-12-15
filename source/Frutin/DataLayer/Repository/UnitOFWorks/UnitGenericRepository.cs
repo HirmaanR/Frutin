@@ -156,20 +156,20 @@ namespace DataLayer
             }
         }
 
-        private GenericRepository<Customer> _customerRepository; // user or customer
-        public GenericRepository<Customer> CustomerRepository
+        private GenericRepository<User> _userRepository; // user 
+        public GenericRepository<User> UserRepository
         {
             get
             {
-                if (_customerRepository == null)
-                    _customerRepository = new GenericRepository<Customer>(db);
-                return _customerRepository;
+                if (_userRepository == null)
+                    _userRepository = new GenericRepository<User>(db);
+                return _userRepository;
             }
         }
 
         public void Dispose()
         {
-            db.Dispose(); +
+            db.Dispose();
 
         }
         public void SaveChange()
