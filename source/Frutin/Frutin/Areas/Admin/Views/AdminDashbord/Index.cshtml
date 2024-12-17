@@ -1,0 +1,55 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin dashbord</title>
+    <link href="~/Content/css/adminDashbord.css" rel="stylesheet" />
+</head>
+<body>
+    <div> 
+        <div class="logo">
+            <img src="~/Content/img/logo-footer.svg" alt="logo" />
+        </div>
+        <div class="links">
+            <ul>
+                <li>
+                    @Html.ActionLink("Blogs", "Index", "Blogs")
+                </li>
+                <li>
+                    @Html.ActionLink("BlogTags", "Index", "BlogTags")
+                </li>
+                <li>
+                    @Html.ActionLink("Categories", "Index", "Categories")
+                </li>
+                <li>
+                    @Html.ActionLink("Links", "Index", "Links")
+                </li>
+                <li>
+                    @Html.ActionLink("Orders", "Index", "Orders")
+                </li>
+                <li>
+                    @Html.ActionLink("Products", "Index", "Products")
+                </li>
+                <li>
+                    @Html.ActionLink("Roles", "Index", "Roles")
+                </li>
+                <li>
+                    @Html.ActionLink("Shops", "Index", "Shops")
+                </li>
+                <li>
+                    @Html.ActionLink("Tags", "Index", "Tags")
+                </li>
+                <li>
+                    @Html.ActionLink("Users", "Index", "Users")
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

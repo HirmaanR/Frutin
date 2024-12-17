@@ -72,3 +72,5 @@ D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.dll
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\DataLayer.pdb
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\DataLayer.dll.config
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.xml
+D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.SqlServer.dll
+D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.SqlServer.xml

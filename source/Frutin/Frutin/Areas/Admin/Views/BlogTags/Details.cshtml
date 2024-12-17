@@ -1,0 +1,35 @@
+﻿@model DataLayer.BlogTag
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BlogTag</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Blog.Tittle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Blog.Tittle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag.Tittle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag.Tittle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BlogTagID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -11,3 +11,4 @@ D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.d
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.pdb
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_database.resources
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.csproj.GenerateResource.cache
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache

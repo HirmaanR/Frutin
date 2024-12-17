@@ -14,7 +14,7 @@ namespace DataLayer
         [Display(Name = "دسته بندی پدر")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public int ParentCategoryID { get; set; }
-        [Display(Name = "غنوان")]
+        [Display(Name = "عنوان")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(150)]
         public string Tittle { get; set; }
