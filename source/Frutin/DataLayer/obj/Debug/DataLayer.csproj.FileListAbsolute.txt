@@ -5,10 +5,15 @@ D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\bin\Debug\EntityFrame
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\bin\Debug\EntityFramework.xml
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_database.resources
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.csproj.GenerateResource.cache
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.dll
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.pdb
-D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_database.resources
-D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.csproj.GenerateResource.cache
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_headrModels.resources
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.edit_headerMenu.resources
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.edit_headerMenu1.resources
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_childHeader_edit_headermenu.resources
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_childmenu.resources

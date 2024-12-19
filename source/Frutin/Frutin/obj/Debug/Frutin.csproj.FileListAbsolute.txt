@@ -47,6 +47,9 @@ D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\roslyn\vbc.exe.confi
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\roslyn\vbc.rsp
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\roslyn\VBCSCompiler.exe
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\roslyn\VBCSCompiler.exe.config
+D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\DataLayer.dll
+D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.dll
+D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.SqlServer.dll
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\Microsoft.Web.Infrastructure.dll
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\System.Web.Helpers.dll
@@ -55,6 +58,10 @@ D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\System.Web.Razor.dll
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\System.Web.Webpages.Deployment.dll
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\System.Web.Webpages.dll
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\System.Web.Webpages.Razor.dll
+D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\DataLayer.pdb
+D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\DataLayer.dll.config
+D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.xml
+D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.SqlServer.xml
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\System.Web.Razor.xml
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\System.Web.Webpages.xml
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\System.Web.Webpages.Deployment.xml
@@ -67,10 +74,3 @@ D:\Programming\projects\Frutin-new\source\Frutin\Frutin\obj\Debug\Frutin.csproj.
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\obj\Debug\Frutin.csproj.CopyComplete
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\obj\Debug\Frutin.dll
 D:\Programming\projects\Frutin-new\source\Frutin\Frutin\obj\Debug\Frutin.pdb
-D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\DataLayer.dll
-D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.dll
-D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\DataLayer.pdb
-D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\DataLayer.dll.config
-D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.xml
-D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.SqlServer.dll
-D:\Programming\projects\Frutin-new\source\Frutin\Frutin\bin\EntityFramework.SqlServer.xml

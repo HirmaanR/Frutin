@@ -1,4 +1,6 @@
-﻿<div class="sidemenu-wrapper sidemenu-cart d-none d-lg-block">
+﻿@model IEnumerable<DataLayer.HeaderMenu>
+
+<div class="sidemenu-wrapper sidemenu-cart d-none d-lg-block">
     <div class="sidemenu-content">
         <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button><div class="widget woocommerce widget_shopping_cart">
             <h3 class="widget_title">سبد خرید</h3>
@@ -35,7 +37,7 @@
     <div class="header-top">
         <div class="container">
             <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
-                <div class="col-auto d-none d-lg-block"><p class="header-notice">سفارش های 50 دلاری یا بیشتر واجد شرایط ارسال رایگان هستند!</p></div>
+                <div class="col-auto d-none d-lg-block"><p class="header-notice">@ViewBag.notificationText</p></div>
             </div>
         </div>
     </div>
@@ -46,47 +48,34 @@
                     <div class="col-auto"><div class="header-logo"><a href="home-organic-farm.html"><img src="Content/img/logo.svg" alt="Frutin"></a></div></div>
                     <div class="col-auto">
                         <nav class="main-menu d-none d-lg-inline-block">
+                            @* todo : load dynamic menu from db *@
                             <ul>
-                                <li class="menu-item-has-children">
-                                    <a href="home-organic-farm.html">صفحه اصلی</a><ul class="sub-menu">
-                                        <li><a href="home-organic-farm.html">مزرعه ارگانیک</a></li>
-                                        <li><a href="home-organic-food.html">غذای ارگانیک</a></li>
-                                        <li><a href="home-mega-shop.html">مگا شاپ</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">درباره ما</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">سرویس</a><ul class="sub-menu">
-                                        <li><a href="service.html">سرویس</a></li>
-                                        <li><a href="service-details.html">جزئیات خدمات</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">صفحات</a><ul class="sub-menu">
+
+                                @foreach (var menu in Model)
+                                {
+                                    if (menu.IsMenuHasChild == true && menu.ChildHeaderMenus.Any())
+                                    {
                                         <li class="menu-item-has-children">
-                                            <a href="#">خرید کنید</a><ul class="sub-menu">
-                                                <li><a href="shop.html">خرید کنید</a></li>
-                                                <li><a href="shop-details.html">جزئیات فروشگاه</a></li>
-                                                <li><a href="cart.html">صفحه سبد خرید</a></li>
-                                                <li><a href="checkout.html">وارسی</a></li>
-                                                <li><a href="wishlist.html">لیست علاقه مندیها</a></li>
+                                            <a href="@menu.Link">@menu.Title</a>
+                                            <ul class="sub-menu">
+
+                                                @foreach (var child in menu.ChildHeaderMenus)
+                                                {
+                                                    <li>
+                                                        <a href="@child.Link">@child.Title</a>
+                                                    </li>
+                                                }
+
                                             </ul>
                                         </li>
-                                        <li><a href="team.html">تیم</a></li>
-                                        <li><a href="team-details.html">جزئیات تیم</a></li>
-                                        <li><a href="project.html">گالری پروژه</a></li>
-                                        <li><a href="project-details.html">جزئیات پروژه</a></li>
-                                        <li><a href="faq.html">صفحه فک</a></li>
-                                        <li><a href="error.html">صفحه خطا</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">وبلاگ</a><ul class="sub-menu">
-                                        <li><a href="blog.html">وبلاگ</a></li>
-                                        <li><a href="blog-details.html">جزئیات وبلاگ</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">مخاطب</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li>
+                                            <a href="@menu.Link">@menu.Title</a>
+                                        </li>
+                                    }
+                                }
                             </ul>
                         </nav><button type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i></button>
                     </div>

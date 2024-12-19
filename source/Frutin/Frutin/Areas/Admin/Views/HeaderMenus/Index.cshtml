@@ -1,0 +1,46 @@
+﻿@model IEnumerable<DataLayer.HeaderMenu>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsMenuHasChild)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Link)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsMenuHasChild)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Link)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.HeaderMenuID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.HeaderMenuID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.HeaderMenuID })
+        </td>
+    </tr>
+}
+
+</table>

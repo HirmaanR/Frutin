@@ -28,6 +28,12 @@ namespace DataLayer
         public DbSet<ProductTag> ProductTag { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<OrderProduct> OrderProduct { get; set; }
+        public DbSet<ChildHeaderMenu> ChildHeaderMenu { get; set; }
+
+        // header models :
+        public DbSet<HeaderMenu> HeaderMenu { get; set; }
+        public DbSet<HeaderNotification> HeaderNotification { get; set; }
+        // end header models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -12,42 +12,31 @@
     <link href="~/Content/css/adminDashbord.css" rel="stylesheet" />
 </head>
 <body>
-    <div> 
-        <div class="logo">
-            <img src="~/Content/img/logo-footer.svg" alt="logo" />
-        </div>
-        <div class="links">
+    <div class="container">
+        <div class="left-section">
+            <div class="logo">
+                <img src="~/Content/img/logo-footer.svg" alt="logo" />
+            </div>
+            <h2>Global Models</h2>
             <ul>
-                <li>
-                    @Html.ActionLink("Blogs", "Index", "Blogs")
-                </li>
-                <li>
-                    @Html.ActionLink("BlogTags", "Index", "BlogTags")
-                </li>
-                <li>
-                    @Html.ActionLink("Categories", "Index", "Categories")
-                </li>
-                <li>
-                    @Html.ActionLink("Links", "Index", "Links")
-                </li>
-                <li>
-                    @Html.ActionLink("Orders", "Index", "Orders")
-                </li>
-                <li>
-                    @Html.ActionLink("Products", "Index", "Products")
-                </li>
-                <li>
-                    @Html.ActionLink("Roles", "Index", "Roles")
-                </li>
-                <li>
-                    @Html.ActionLink("Shops", "Index", "Shops")
-                </li>
-                <li>
-                    @Html.ActionLink("Tags", "Index", "Tags")
-                </li>
-                <li>
-                    @Html.ActionLink("Users", "Index", "Users")
-                </li>
+                <li>@Html.ActionLink("Blogs", "Index", "Blogs")</li>
+                <li>@Html.ActionLink("BlogTags", "Index", "BlogTags")</li>
+                <li>@Html.ActionLink("Categories", "Index", "Categories")</li>
+                <li>@Html.ActionLink("Links", "Index", "Links")</li>
+                <li>@Html.ActionLink("Orders", "Index", "Orders")</li>
+                <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                <li>@Html.ActionLink("Roles", "Index", "Roles")</li>
+                <li>@Html.ActionLink("Shops", "Index", "Shops")</li>
+                <li>@Html.ActionLink("Tags", "Index", "Tags")</li>
+                <li>@Html.ActionLink("Users", "Index", "Users")</li>
+            </ul>
+        </div>
+        <div class="right-section">
+            <h2>Site setting</h2>
+            <ul>
+                <li>@Html.ActionLink("Header Menu", "Index", "HeaderMenus")</li>
+                <li>@Html.ActionLink("Header Notification", "Index", "HeaderNotifications")</li>
+                <li>@Html.ActionLink("Header Child menu", "Index", "ChildHeaderMenus")</li>
             </ul>
         </div>
     </div>

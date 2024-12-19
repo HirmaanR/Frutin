@@ -167,6 +167,43 @@ namespace DataLayer
             }
         }
 
+        // header models repository : 
+        private GenericRepository<HeaderMenu> _headerMenuRepository; // menu 
+        public GenericRepository<HeaderMenu> HeaderMenuRepository
+        {
+            get
+            {
+                if (_headerMenuRepository == null)
+                    _headerMenuRepository = new GenericRepository<HeaderMenu>(db);
+                return _headerMenuRepository;
+            }
+        }
+
+        private GenericRepository<ChildHeaderMenu> _headerChildMenuRepository; // child menu  
+        public GenericRepository<ChildHeaderMenu> HeaderChildMenuRepository
+        {
+            get
+            {
+                if (_headerChildMenuRepository == null)
+                    _headerChildMenuRepository = new GenericRepository<ChildHeaderMenu>(db);
+                return _headerChildMenuRepository;
+            }
+        }
+
+        private GenericRepository<HeaderNotification> _headerNotificationRepository; // notification 
+        public GenericRepository<HeaderNotification> HeaderNotificationRepository
+        {
+            get
+            {
+                if (_headerNotificationRepository == null)
+                    _headerNotificationRepository = new GenericRepository<HeaderNotification>(db);
+                return _headerNotificationRepository;
+            }
+        }
+
+        // end header models repository
+
+
         public void Dispose()
         {
             db.Dispose();
