@@ -17,3 +17,4 @@ D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.c
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.edit_headerMenu1.resources
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_childHeader_edit_headermenu.resources
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_childmenu.resources
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_NewsEmilModel.resources

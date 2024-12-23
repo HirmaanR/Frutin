@@ -58,6 +58,26 @@
     <script src="Content/js/imagesloaded.pkgd.min.js"></script>
     <script src="Content/js/isotope.pkgd.min.js"></script>
     <script src="Content/js/main.js"></script>
+    @* for _SubscribePartial post action *@
+    <script>
+        $(document).on("submit", "#newsletterForm", function (e) {
+            e.preventDefault(); // جلوگیری از رفتار پیش‌فرض فرم
+
+            $.ajax({
+                url: $(this).attr("action"),
+                method: "POST",
+                data: $(this).serialize(),
+                success: function (response) {
+                    // رندر Partial View جدید در div
+                    $("#newsletterPartial").html(response);
+                    alert("عملیات با موفقیت انجام شد");
+                },
+                error: function () {
+                    alert("خطایی رخ داده است. لطفاً دوباره تلاش کنید.");
+                }
+            });
+        });</script>
+
     @RenderSection("script", required: false)
 </body>
 </html>

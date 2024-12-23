@@ -204,6 +204,21 @@ namespace DataLayer
         // end header models repository
 
 
+        // subscribe news email model repository 
+
+        private GenericRepository<NewsEmail> _newsSubscribeEmailRepository;  
+        public GenericRepository<NewsEmail> NewsSubscribeEmailRepository
+        {
+            get
+            {
+                if (_newsSubscribeEmailRepository == null)
+                    _newsSubscribeEmailRepository = new GenericRepository<NewsEmail>(db);
+                return _newsSubscribeEmailRepository;
+            }
+        }
+        // end subscribe news email model repository 
+
+
         public void Dispose()
         {
             db.Dispose();

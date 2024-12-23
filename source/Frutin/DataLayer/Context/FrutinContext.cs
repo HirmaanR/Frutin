@@ -35,6 +35,10 @@ namespace DataLayer
         public DbSet<HeaderNotification> HeaderNotification { get; set; }
         // end header models
 
+        // subcribe news email 
+        public DbSet<NewsEmail> NewsEmail { get; set; }
+        // end sunbscribe news email
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()

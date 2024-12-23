@@ -781,6 +781,11 @@
     <Content Include="Areas\Admin\Views\HeaderMenus\Details.cshtml" />
     <Content Include="Areas\Admin\Views\HeaderMenus\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\HeaderMenus\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsEmails\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsEmails\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsEmails\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsEmails\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsEmails\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -798,6 +803,7 @@
     <Compile Include="Areas\Admin\Controllers\HeaderMenusController.cs" />
     <Compile Include="Areas\Admin\Controllers\HeaderNotificationsController.cs" />
     <Compile Include="Areas\Admin\Controllers\LinksController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NewsEmailsController.cs" />
     <Compile Include="Areas\Admin\Controllers\OrdersController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Admin\Controllers\RolesController.cs" />
@@ -943,11 +949,16 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\SendEmail\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
       <Project>{a9ad836b-f2f1-4bb7-8861-2746d2c7c3b9}</Project>
       <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{a05eb706-28f5-4a88-a2dc-64829bb0cc93}</Project>
+      <Name>Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
