@@ -7,7 +7,7 @@ using MailKit.Net.Smtp;
 using MailKit;
 using MimeKit;
 
-namespace Utility
+namespace UtilityLayer
 {
     public class EmailService // 
     {

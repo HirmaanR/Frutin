@@ -218,6 +218,18 @@ namespace DataLayer
         }
         // end subscribe news email model repository 
 
+        // footer repository
+        private GenericRepository<FooterContent> _footerContentRepository;
+        public GenericRepository<FooterContent> FooterContentRepository
+        {
+            get
+            {
+                if (_footerContentRepository == null)
+                    _footerContentRepository = new GenericRepository<FooterContent>(db);
+                return _footerContentRepository;
+            }
+        }
+        // end footer repository
 
         public void Dispose()
         {

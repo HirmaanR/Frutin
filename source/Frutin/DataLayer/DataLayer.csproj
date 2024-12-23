@@ -79,12 +79,17 @@
     <Compile Include="Migrations\202412221243162_init_NewsEmilModel.Designer.cs">
       <DependentUpon>202412221243162_init_NewsEmilModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202412231834352_init_footerContent.cs" />
+    <Compile Include="Migrations\202412231834352_init_footerContent.Designer.cs">
+      <DependentUpon>202412231834352_init_footerContent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\BlogTag.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\NewsEmail.cs" />
+    <Compile Include="Models\SiteSetting\Footer\FooterContent.cs" />
     <Compile Include="Models\SiteSetting\Header\ChildHeaderMenu.cs" />
     <Compile Include="Models\SiteSetting\Header\HeaderMenu.cs" />
     <Compile Include="Models\SiteSetting\Header\HeaderNotification.cs" />
@@ -126,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202412221243162_init_NewsEmilModel.resx">
       <DependentUpon>202412221243162_init_NewsEmilModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412231834352_init_footerContent.resx">
+      <DependentUpon>202412231834352_init_footerContent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

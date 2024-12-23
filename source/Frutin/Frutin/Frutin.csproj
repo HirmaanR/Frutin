@@ -786,6 +786,11 @@
     <Content Include="Areas\Admin\Views\NewsEmails\Details.cshtml" />
     <Content Include="Areas\Admin\Views\NewsEmails\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\NewsEmails\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\FooterContents\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\FooterContents\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\FooterContents\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\FooterContents\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\FooterContents\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -800,6 +805,7 @@
     <Compile Include="Areas\Admin\Controllers\BlogTagsController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\ChildHeaderMenusController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FooterContentsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HeaderMenusController.cs" />
     <Compile Include="Areas\Admin\Controllers\HeaderNotificationsController.cs" />
     <Compile Include="Areas\Admin\Controllers\LinksController.cs" />
@@ -956,9 +962,9 @@
       <Project>{a9ad836b-f2f1-4bb7-8861-2746d2c7c3b9}</Project>
       <Name>DataLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Utility\Utility.csproj">
+    <ProjectReference Include="..\Utility\UtilityLayer.csproj">
       <Project>{a05eb706-28f5-4a88-a2dc-64829bb0cc93}</Project>
-      <Name>Utility</Name>
+      <Name>UtilityLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -39,6 +39,10 @@ namespace DataLayer
         public DbSet<NewsEmail> NewsEmail { get; set; }
         // end sunbscribe news email
 
+        // footer model : 
+        public DbSet<FooterContent> FooterContent { get; set; }
+        // end footer model 
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
