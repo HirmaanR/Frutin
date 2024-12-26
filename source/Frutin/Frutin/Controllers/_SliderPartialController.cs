@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DataLayer;
 
 namespace Frutin.Controllers
 {
@@ -11,7 +12,10 @@ namespace Frutin.Controllers
         // GET: _SliderPartial
         public ActionResult Index()
         {
-            return PartialView();
+            UnitGenericRepository db = new UnitGenericRepository();
+            IEnumerable<Slider> model = db.SliderRepository.Get(where:s=>s.IsAviable==true).ToList();
+            db.Dispose();
+            return PartialView(model);
         }
     }
 }

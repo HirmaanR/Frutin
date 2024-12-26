@@ -12,11 +12,13 @@ namespace Frutin.Controllers
         // GET: _HeaderPartial 
         public ActionResult Index()
         {
-            UnitGenericRepository db = new UnitGenericRepository();
-            ViewBag.notificationText = db.HeaderNotificationRepository.Get(where: n => n.IsAviable == true).Select(n=>n.Text).First();
+            IEnumerable<HeaderMenu> menu;
 
-            var menu = db.HeaderMenuRepository.Get(includes: "ChildHeaderMenus");
-
+            using (UnitGenericRepository db = new UnitGenericRepository())
+            {
+                ViewBag.notificationText = db.HeaderNotificationRepository.Get(where: n => n.IsAviable == true).Select(n => n.Text).First();
+                menu = db.HeaderMenuRepository.Get(includes: "ChildHeaderMenus").ToList();
+            }
             return PartialView(menu);
         }
     }

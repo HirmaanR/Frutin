@@ -83,6 +83,14 @@
     <Compile Include="Migrations\202412231834352_init_footerContent.Designer.cs">
       <DependentUpon>202412231834352_init_footerContent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202412251543495_init_slider.cs" />
+    <Compile Include="Migrations\202412251543495_init_slider.Designer.cs">
+      <DependentUpon>202412251543495_init_slider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412260627552_edit_sliderModel.cs" />
+    <Compile Include="Migrations\202412260627552_edit_sliderModel.Designer.cs">
+      <DependentUpon>202412260627552_edit_sliderModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\BlogTag.cs" />
@@ -93,6 +101,7 @@
     <Compile Include="Models\SiteSetting\Header\ChildHeaderMenu.cs" />
     <Compile Include="Models\SiteSetting\Header\HeaderMenu.cs" />
     <Compile Include="Models\SiteSetting\Header\HeaderNotification.cs" />
+    <Compile Include="Models\Slider.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Link.cs" />
     <Compile Include="Models\Order.cs" />
@@ -134,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202412231834352_init_footerContent.resx">
       <DependentUpon>202412231834352_init_footerContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412251543495_init_slider.resx">
+      <DependentUpon>202412251543495_init_slider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412260627552_edit_sliderModel.resx">
+      <DependentUpon>202412260627552_edit_sliderModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

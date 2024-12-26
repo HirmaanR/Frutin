@@ -19,3 +19,5 @@ D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.M
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_childmenu.resources
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_NewsEmilModel.resources
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_footerContent.resources
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_slider.resources
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.edit_sliderModel.resources

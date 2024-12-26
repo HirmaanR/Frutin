@@ -231,6 +231,22 @@ namespace DataLayer
         }
         // end footer repository
 
+
+        // slider : 
+        private GenericRepository<Slider> _sliderRepository;
+        public GenericRepository<Slider> SliderRepository
+        {
+            get
+            {
+                if (_sliderRepository == null)
+                    _sliderRepository = new GenericRepository<Slider>(db);
+                return _sliderRepository;
+            }
+        }
+        
+        // end slider
+
+
         public void Dispose()
         {
             db.Dispose();

@@ -41,7 +41,11 @@ namespace DataLayer
 
         // footer model : 
         public DbSet<FooterContent> FooterContent { get; set; }
-        // end footer model 
+        // end footer model
+
+        // slider 
+        public DbSet<Slider> Slider { get; set; }
+        // end slider
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
