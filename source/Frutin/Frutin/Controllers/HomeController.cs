@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DataLayer;
 
 namespace Frutin.Controllers
 {
@@ -11,7 +12,12 @@ namespace Frutin.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            IEnumerable<Category> model;
+            using (UnitGenericRepository db = new UnitGenericRepository())
+            {
+                model = db.CategoryRepository.Get(includes: "Products").ToList();
+            }
+            return View(model);
         }
     }
 }

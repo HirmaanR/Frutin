@@ -206,7 +206,7 @@ namespace DataLayer
 
         // subscribe news email model repository 
 
-        private GenericRepository<NewsEmail> _newsSubscribeEmailRepository;  
+        private GenericRepository<NewsEmail> _newsSubscribeEmailRepository;
         public GenericRepository<NewsEmail> NewsSubscribeEmailRepository
         {
             get
@@ -243,8 +243,24 @@ namespace DataLayer
                 return _sliderRepository;
             }
         }
-        
+
         // end slider
+
+        // about view model repository :
+
+        private AboutViewModelRepository _aboutViewModelRepository;
+        public AboutViewModelRepository AboutViewModelRepository
+        {
+            get
+            {
+                if (_aboutViewModelRepository == null)
+                    _aboutViewModelRepository = new AboutViewModelRepository(db);
+
+                return _aboutViewModelRepository;
+            }
+        }
+
+        // End about view model repository 
 
 
         public void Dispose()

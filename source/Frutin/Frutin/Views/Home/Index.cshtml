@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<DataLayer.Category>
 @{
     ViewBag.Title = "Frutin - Home";
     Layout = "~/Views/Shared/_FrutinLayout.cshtml";
@@ -39,54 +39,70 @@
         </div>
     </div>
 
-    <section class="space-top">
+    <section class="space-top"> @* categories *@
         <div class="container">
             <div class="title-area text-center">
                 <span class="sub-title"><img src="Content/Refrence/img/theme-img/title_icon.svg" alt="Icon">دسته غذا</span><h2 class="sec-title">آنچه ما ارائه می دهیم</h2>
             </div>
             <div class="swiper th-slider swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden" data-slider-options="{&quot;breakpoints&quot;:{&quot;0&quot;:{&quot;slidesPerView&quot;:1},&quot;400&quot;:{&quot;slidesPerView&quot;:&quot;2&quot;},&quot;768&quot;:{&quot;slidesPerView&quot;:&quot;3&quot;},&quot;992&quot;:{&quot;slidesPerView&quot;:&quot;4&quot;},&quot;1200&quot;:{&quot;slidesPerView&quot;:&quot;5&quot;}}}">
                 <div class="swiper-wrapper" id="swiper-wrapper-19dd04e6ca823726" aria-live="off" style="transition-duration: 1000ms; transform: translate3d(540px, 0px, 0px);">
-                    <div class="swiper-slide" role="group" aria-label="2 / 5" style="width: 246px; margin-left: 24px;" data-swiper-slide-index="1">
-                        <div class="category-card">
-                            <div class="box-shape background-image" style="background-image: url(&quot;Content/Refrence/img/bg/category_card_bg.png&quot;);"></div>
-                            <div class="box-icon bg-mask" style="mask-image: url(&quot;Content/Refrence/img/bg/category_card_icon_bg.png&quot;);"><img src="Content/Refrence/img/icon/category_card_2.svg" alt="Image"></div>
-                            <p class="box-subtitle">محصول (05)</p>
-                            <h3 class="box-title"><a href="shop.html">میوه های طبیعی</a></h3>
-                        </div>
-                    </div><div class="swiper-slide swiper-slide-prev" role="group" aria-label="3 / 5" style="width: 246px; margin-left: 24px;" data-swiper-slide-index="2">
-                        <div class="category-card">
-                            <div class="box-shape background-image" style="background-image: url(&quot;Content/Refrence/img/bg/category_card_bg.png&quot;);"></div>
-                            <div class="box-icon bg-mask" style="mask-image: url(&quot;Content/Refrence/img/bg/category_card_icon_bg.png&quot;);"><img src="Content/Refrence/img/icon/category_card_3.svg" alt="Image"></div>
-                            <p class="box-subtitle">محصول (04)</p>
-                            <h3 class="box-title"><a href="shop.html">محصولات لبنی</a></h3>
-                        </div>
-                    </div><div class="swiper-slide swiper-slide-active" role="group" aria-label="4 / 5" style="width: 246px; margin-left: 24px;" data-swiper-slide-index="3">
-                        <div class="category-card">
-                            <div class="box-shape background-image" style="background-image: url(&quot;Content/Refrence/img/bg/category_card_bg.png&quot;);"></div>
-                            <div class="box-icon bg-mask" style="mask-image: url(&quot;Content/Refrence/img/bg/category_card_icon_bg.png&quot;);"><img src="Content/Refrence/img/icon/category_card_4.svg" alt="Image"></div>
-                            <p class="box-subtitle">محصول (07)</p>
-                            <h3 class="box-title"><a href="shop.html">چای و قهوه</a></h3>
-                        </div>
-                    </div><div class="swiper-slide swiper-slide-next" role="group" aria-label="5 / 5" style="width: 246px; margin-left: 24px;" data-swiper-slide-index="4">
-                        <div class="category-card">
-                            <div class="box-shape background-image" style="background-image: url(&quot;Content/Refrence/img/bg/category_card_bg.png&quot;);"></div>
-                            <div class="box-icon bg-mask" style="mask-image: url(&quot;Content/Refrence/img/bg/category_card_icon_bg.png&quot;);"><img src="Content/Refrence/img/icon/category_card_5.svg" alt="Image"></div>
-                            <p class="box-subtitle">محصول (10)</p>
-                            <h3 class="box-title"><a href="shop.html">گوشت و ماهی</a></h3>
-                        </div>
-                    </div><div class="swiper-slide" role="group" aria-label="1 / 5" style="width: 246px; margin-left: 24px;" data-swiper-slide-index="0">
-                        <div class="category-card">
-                            <div class="box-shape background-image" style="background-image: url(&quot;Content/Refrence/img/bg/category_card_bg.png&quot;);"></div>
-                            <div class="box-icon bg-mask" style="mask-image: url(&quot;Content/Refrence/img/bg/category_card_icon_bg.png&quot;);"><img src="Content/Refrence/img/icon/category_card_1.svg" alt="Image"></div>
-                            <p class="box-subtitle">محصول (08)</p>
-                            <h3 class="box-title"><a href="shop.html">سبزیجات تازه</a></h3>
-                        </div>
-                    </div>
+
+                    @foreach (var item in Model.Select((value, index) => new { index, value }))
+                    {
+                        var value = item.value;
+                        var index = item.index;
+
+                        if (index == 0)
+                        {
+                            <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 5" style="width: 246px; margin-left: 24px;" data-swiper-slide-index="1">
+                                <div class="category-card">
+                                    <div class="box-shape background-image" style="background-image: url(&quot;Content/Refrence/img/bg/category_card_bg.png&quot;);"></div>
+                                    <div class="box-icon bg-mask" style="mask-image: url(&quot;Content/Refrence/img/bg/category_card_icon_bg.png&quot;);"><img src="~/Content/Images/Categories/@value.ImageName" alt="Image"></div>
+                                    <p class="box-subtitle">محصول : @value.Products.Count()</p>
+                                    <h3 class="box-title"><a href="shop.html">@value.Tittle</a></h3>
+                                </div>
+                            </div>
+                        }
+                        else if (index == 1)
+                        {
+                            <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 5" style="width: 246px; margin-left: 24px;" data-swiper-slide-index="1">
+                                <div class="category-card">
+                                    <div class="box-shape background-image" style="background-image: url(&quot;Content/Refrence/img/bg/category_card_bg.png&quot;);"></div>
+                                    <div class="box-icon bg-mask" style="mask-image: url(&quot;Content/Refrence/img/bg/category_card_icon_bg.png&quot;);"><img src="~/Content/Images/Categories/@value.ImageName" alt="Image"></div>
+                                    <p class="box-subtitle">محصول : @value.Products.Count()</p>
+                                    <h3 class="box-title"><a href="shop.html">@value.Tittle</a></h3>
+                                </div>
+                            </div>
+                        }
+                        else if (index == 2)
+                        {
+                            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="2 / 5" style="width: 246px; margin-left: 24px;" data-swiper-slide-index="1">
+                                <div class="category-card">
+                                    <div class="box-shape background-image" style="background-image: url(&quot;Content/Refrence/img/bg/category_card_bg.png&quot;);"></div>
+                                    <div class="box-icon bg-mask" style="mask-image: url(&quot;Content/Refrence/img/bg/category_card_icon_bg.png&quot;);"><img src="~/Content/Images/Categories/@value.ImageName" alt="Image"></div>
+                                    <p class="box-subtitle">محصول : @value.Products.Count()</p>
+                                    <h3 class="box-title"><a href="shop.html">@value.Tittle</a></h3>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="swiper-slide" role="group" aria-label="2 / 5" style="width: 246px; margin-left: 24px;" data-swiper-slide-index="1">
+                                <div class="category-card">
+                                    <div class="box-shape background-image" style="background-image: url(&quot;Content/Refrence/img/bg/category_card_bg.png&quot;);"></div>
+                                    <div class="box-icon bg-mask" style="mask-image: url(&quot;Content/Refrence/img/bg/category_card_icon_bg.png&quot;);"><img src="~/Content/Images/Categories/@value.ImageName" alt="Image"></div>
+                                    <p class="box-subtitle">محصول : @value.Products.Count()</p>
+                                    <h3 class="box-title"><a href="shop.html">@value.Tittle</a></h3>
+                                </div>
+                            </div>
+                        }
+                    }
+
                 </div>
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
             </div>
         </div>
-    </section>
+    </section> @* end categories *@
 
     <div class="overflow-hidden space" id="about-sec">
         <div class="container">
@@ -146,230 +162,10 @@
         </div>
     </section>
 
-    <section class="bg-smoke2 space shape-mockup-wrap" id="shop-sec" style="padding-top: 200px;">
-        <div class="shape-mockup" style="top: 0px; left: 0px;"><img src="Content/Refrence/img/shape/vector_shape_1.png" alt="shape"></div>
-        <div class="shape-mockup" style="right: 0px; bottom: 0px;"><img src="Content/Refrence/img/shape/vector_shape_2.png" alt="shape"></div>
-        <div class="container text-center">
-            <div class="title-area text-center">
-                <span class="sub-title"><img src="Content/Refrence/img/theme-img/title_icon.svg" alt="Icon">محصولات ارگانیک</span><h2 class="sec-title">محصولات ارگانیک و تازه روزانه!</h2>
-            </div>
-            <div class="filter-menu indicator-active filter-menu-active">
-                <button data-filter="*" class="th-btn tab-btn active" type="button">همه</button><button data-filter=".cat1" class="th-btn tab-btn" type="button">میوه ها</button><button data-filter=".cat2" class="th-btn tab-btn" type="button">سبزی</button><button data-filter=".cat3" class="th-btn tab-btn" type="button">گوشت و ماهی</button><button data-filter=".cat4" class="th-btn tab-btn" type="button">آب میوه</button><button data-filter=".cat5" class="th-btn tab-btn" type="button">سالاد</button>
-            </div>
-            <div class="row gy-4 filter-active" style="position: relative; height: 1678.15px;">
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat3" style="position: absolute; left: 0px; top: 0px;">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="Content/Refrence/img/product/product_1_1.jpg" alt="Product Image"><span class="product-tag">داغ</span><div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a><a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a><a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">میوه های تازه</a><h3 class="product-title"><a href="shop-details.html">میوه سیب بوسکو</a></h3>
-                            <span class="price">$177.85</span><div class="woocommerce-product-rating">
-                                <span class="count">(120 Reviews)</span><div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span>دارای رتبه<strong class="rating">5.00</strong>از 5 بر اساس<span class="rating">1</span>رتبه بندی مشتری</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat5 cat2" style="position: absolute; left: 270px; top: 0px;">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="Content/Refrence/img/product/product_1_2.jpg" alt="Product Image"><span class="product-tag">جدید</span><div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a><a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a><a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">سبزیجات</a><h3 class="product-title"><a href="shop-details.html">گل کلم سبز</a></h3>
-                            <span class="price">$39.85</span><div class="woocommerce-product-rating">
-                                <span class="count">(120 Reviews)</span><div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span>دارای رتبه<strong class="rating">5.00</strong>از 5 بر اساس<span class="rating">1</span>رتبه بندی مشتری</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat1 cat4" style="position: absolute; left: 0px; top: 413.15px;">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="Content/Refrence/img/product/product_1_3.jpg" alt="Product Image"><span class="product-tag">داغ</span><div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a><a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a><a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">میوه های تازه</a><h3 class="product-title"><a href="shop-details.html">پرتقال ماندارین</a></h3>
-                            <span class="price">$96.85</span><div class="woocommerce-product-rating">
-                                <span class="count">(120 Reviews)</span><div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span>دارای رتبه<strong class="rating">5.00</strong>از 5 بر اساس<span class="rating">1</span>رتبه بندی مشتری</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat2 cat5" style="position: absolute; left: 270px; top: 413.15px;">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="Content/Refrence/img/product/product_1_4.jpg" alt="Product Image"><span class="product-tag">فروش</span><div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a><a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a><a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">سبزیجات</a><h3 class="product-title"><a href="shop-details.html">موسیر پیاز قرمز</a></h3>
-                            <span class="price">$08.85<del>$06.99</del></span><div class="woocommerce-product-rating">
-                                <span class="count">(120 Reviews)</span><div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span>دارای رتبه<strong class="rating">5.00</strong>از 5 بر اساس<span class="rating">1</span>رتبه بندی مشتری</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat3 cat1" style="position: absolute; left: 0px; top: 826.3px;">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="Content/Refrence/img/product/product_1_5.jpg" alt="Product Image"><span class="product-tag">جدید</span><div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a><a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a><a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">میوه های تازه</a><h3 class="product-title"><a href="shop-details.html">آلبالو قرمز</a></h3>
-                            <span class="price">$32.85</span><div class="woocommerce-product-rating">
-                                <span class="count">(120 Reviews)</span><div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span>دارای رتبه<strong class="rating">5.00</strong>از 5 بر اساس<span class="rating">1</span>رتبه بندی مشتری</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat5 cat4 cat1 cat2" style="position: absolute; left: 270px; top: 826.3px;">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="Content/Refrence/img/product/product_1_6.jpg" alt="Product Image"><span class="product-tag">داغ</span><div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a><a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a><a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">میوه های تازه</a><h3 class="product-title"><a href="shop-details.html">میوه های توت فرنگی</a></h3>
-                            <span class="price">$30.85</span><div class="woocommerce-product-rating">
-                                <span class="count">(120 Reviews)</span><div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span>دارای رتبه<strong class="rating">5.00</strong>از 5 بر اساس<span class="rating">1</span>رتبه بندی مشتری</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat2 cat1 cat4 cat5" style="position: absolute; left: 0px; top: 1239.45px;">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="Content/Refrence/img/product/product_1_7.jpg" alt="Product Image"><span class="product-tag">جدید</span><div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a><a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a><a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">میوه های تازه</a><h3 class="product-title"><a href="shop-details.html">شش موز رسیده</a></h3>
-                            <span class="price">$232.85</span><div class="woocommerce-product-rating">
-                                <span class="count">(120 Reviews)</span><div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span>دارای رتبه<strong class="rating">5.00</strong>از 5 بر اساس<span class="rating">1</span>رتبه بندی مشتری</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat3" style="position: absolute; left: 270px; top: 1239.45px;">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="Content/Refrence/img/product/product_1_8.jpg" alt="Product Image"><span class="product-tag">داغ</span><div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a><a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a><a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">میوه های تازه</a><h3 class="product-title"><a href="shop-details.html">گوشت گاو دنده سوسیس</a></h3>
-                            <span class="price">$30.85</span><div class="woocommerce-product-rating">
-                                <span class="count">(120 Reviews)</span><div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span>دارای رتبه<strong class="rating">5.00</strong>از 5 بر اساس<span class="rating">1</span>رتبه بندی مشتری</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> @* products *@
+    @Html.Action("Index", "_ProductPartial") @* products (partail) *@
 
-    <section class="space arrow-wrap" id="blog-sec">
-        <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title"><img src="Content/Refrence/img/theme-img/title_icon.svg" alt="shape">وبلاگ و اخبار</span><h2 class="sec-title">آخرین به روز رسانی اخبار و مقالات</h2>
-            </div>
-            <div class="slider-area">
-                <div class="swiper th-slider has-shadow swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden" id="blogSlider1" data-slider-options="{&quot;breakpoints&quot;:{&quot;0&quot;:{&quot;slidesPerView&quot;:1},&quot;576&quot;:{&quot;slidesPerView&quot;:&quot;1&quot;},&quot;768&quot;:{&quot;slidesPerView&quot;:&quot;2&quot;},&quot;992&quot;:{&quot;slidesPerView&quot;:&quot;2&quot;},&quot;1200&quot;:{&quot;slidesPerView&quot;:&quot;3&quot;}}}">
-                    <div class="swiper-wrapper" id="swiper-wrapper-d9230436172ff6d5" aria-live="off" style="transition-duration: 0ms; transform: translate3d(2700px, 0px, 0px); transition-delay: 0ms;">
-                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="1">
-                            <div class="blog-card">
-                                <div class="blog-img"><img src="Content/Refrence/img/blog/blog_1_2.jpg" alt="blog image"></div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>توسط میوه</a><a href="blog.html"><i class="far fa-calendar"></i>16 مارس 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="blog-details.html">تغذیه خود را با وعده های غذایی ارگانیک متحول کنید</a></h3>
-                                    <a href="blog-details.html" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div><div class="swiper-slide" role="group" aria-label="3 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="2">
-                            <div class="blog-card">
-                                <div class="blog-img"><img src="Content/Refrence/img/blog/blog_1_3.jpg" alt="blog image"></div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>توسط میوه</a><a href="blog.html"><i class="far fa-calendar"></i>17 مارس 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="blog-details.html">با تغذیه ارگانیک سلامت خود را بهبود بخشید</a></h3>
-                                    <a href="blog-details.html" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div><div class="swiper-slide" role="group" aria-label="4 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="3">
-                            <div class="blog-card">
-                                <div class="blog-img"><img src="Content/Refrence/img/blog/blog_1_4.jpg" alt="blog image"></div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>توسط میوه</a><a href="blog.html"><i class="far fa-calendar"></i>19 مارس 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="blog-details.html">خوردن ارگانیک برای سلامتی بهتر عالی است</a></h3>
-                                    <a href="blog-details.html" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div><div class="swiper-slide" role="group" aria-label="5 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="4">
-                            <div class="blog-card">
-                                <div class="blog-img"><img src="Content/Refrence/img/blog/blog_1_1.jpg" alt="blog image"></div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>توسط میوه</a><a href="blog.html"><i class="far fa-calendar"></i>15 مارس 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="blog-details.html">عادات غذایی خود را با غذاهای ارگانیک تغییر دهید</a></h3>
-                                    <a href="blog-details.html" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div><div class="swiper-slide swiper-slide-prev" role="group" aria-label="6 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="5">
-                            <div class="blog-card">
-                                <div class="blog-img"><img src="Content/Refrence/img/blog/blog_1_2.jpg" alt="blog image"></div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>توسط میوه</a><a href="blog.html"><i class="far fa-calendar"></i>16 مارس 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="blog-details.html">تغذیه خود را با وعده های غذایی ارگانیک متحول کنید</a></h3>
-                                    <a href="blog-details.html" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div><div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="0">
-                            <div class="blog-card">
-                                <div class="blog-img"><img src="Content/Refrence/img/blog/blog_1_1.jpg" alt="blog image"></div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>توسط میوه</a><a href="blog.html"><i class="far fa-calendar"></i>15 مارس 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="blog-details.html">عادات غذایی خود را با غذاهای ارگانیک تغییر دهید</a></h3>
-                                    <a href="blog-details.html" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                </div>
-                <button data-slider-prev="#blogSlider1" class="slider-arrow slider-prev"><i class="far fa-arrow-left"></i></button><button data-slider-next="#blogSlider1" class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
-            </div>
-        </div>
-    </section> @* last blogs *@
+    @Html.Action("Index", "_BlogsPartial") @* last blogs (partial) *@
 
     @Html.Action("Index", "_SubscribeForm") @* subscribe form (partial) *@
-
-    <div class="scroll-top show">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 284.566;">
-            </path>
-        </svg>
-    </div> @* Scrolbar *@
 
 </div>

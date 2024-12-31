@@ -14,7 +14,6 @@ By focusing on providing fresh products, competitive prices, and fast and reliab
     -> BackEnd
         - Asp.Net MVC
         - Entity Framework
-        - Ajax
 
     -> FrontEnd 
         - jquery
@@ -32,6 +31,7 @@ By focusing on providing fresh products, competitive prices, and fast and reliab
 ## Project Architecture
 
  - DataLayer : In this layer, models and connections to the database are created. The repository pattern is also used, in such a way that a generic repository is used to connect to each table. The dependency of this repository is removed using "dependency injection", which ensures compliance with the rules of solidity and object orientation.
+ 
  - UtilityLayer : This layer has built-in tools, such as sending emails and converting Gregorian dates to Solar dates.
 
 

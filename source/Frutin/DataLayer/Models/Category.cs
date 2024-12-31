@@ -23,6 +23,9 @@ namespace DataLayer
         [MaxLength(150)]
         public string EntityType { get; set; }
 
+        public string ImageName { get; set; }
+
+
         // Navigation Property :
         public virtual List<Product> Products { get; set; }
         public virtual List<Blog> Blogs { get; set; }

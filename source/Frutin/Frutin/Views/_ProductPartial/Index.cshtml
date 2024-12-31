@@ -1,0 +1,46 @@
+﻿@model IEnumerable<DataLayer.Product>
+
+@{
+    Layout = "";
+}
+
+<section class="bg-smoke2 space shape-mockup-wrap" id="shop-sec" style="padding-top: 200px;">
+    <div class="shape-mockup" style="top: 0px; left: 0px;"><img src="Content/Refrence/img/shape/vector_shape_1.png" alt="shape"></div>
+    <div class="shape-mockup" style="right: 0px; bottom: 0px;"><img src="Content/Refrence/img/shape/vector_shape_2.png" alt="shape"></div>
+    <div class="container text-center">
+        <div class="title-area text-center">
+            <span class="sub-title"><img src="Content/Refrence/img/theme-img/title_icon.svg" alt="Icon">محصولات ارگانیک</span><h2 class="sec-title">محصولات ارگانیک و تازه روزانه!</h2>
+        </div>
+        <div class="filter-menu indicator-active filter-menu-active">
+            <button data-filter="*" class="th-btn tab-btn active" type="button">همه</button>
+            @foreach (var item in Model)
+            {
+                <button data-filter=".cat@(item.Category.CategoryID)" class="th-btn tab-btn" type="button">@item.Category.Tittle</button>
+            }
+        </div>
+        <div class="row gy-4 filter-active" style="position: relative; height: 1678.15px;">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat@(item.CategoryID) " style="position: absolute; left: 0px; top: 0px;">
+                    <div class="th-product product-grid">
+                        <div class="product-img">
+                            <img src="~/Content/Images/Products/@item.ImageName" alt="Product Image">
+                            <div class="actions">
+                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a><a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a><a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            @* TODO : product link *@
+                            <a href="" class="product-category">میوه های تازه</a>
+                            <h3 class="product-title">
+                                <a href="shop-details.html">@item.Name</a>
+                            </h3>
+                            <span class="price">$@item.Price</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section> @* products *@

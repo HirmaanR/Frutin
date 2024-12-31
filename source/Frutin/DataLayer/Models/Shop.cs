@@ -42,6 +42,10 @@ namespace DataLayer
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(350)]
         public string Address { get; set; }
+        [Display(Name = "نام تصویر")]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        [MaxLength(100)]
+        public string ImageName { get; set; }
 
         // Navigation Property :
         public virtual List<Link> Links { get; set; }

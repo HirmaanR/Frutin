@@ -30,6 +30,9 @@ namespace DataLayer
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(300)]
         public string Text { get; set; }
+        [Display(Name = "آیا این نظر در قسمت نظرات درباره ما نمایش داده شود؟")]
+        public bool IsAboutComment { get; set; }
+
 
         public virtual User User { get; set; }
 

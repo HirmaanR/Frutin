@@ -1,0 +1,164 @@
+﻿@model IEnumerable<DataLayer.Blog>
+
+@using Utility
+
+@{
+    Layout = "";
+}
+
+
+<section class="space arrow-wrap" id="blog-sec">
+    <div class="container">
+        <div class="title-area text-center">
+            <span class="sub-title"><img src="Content/Refrence/img/theme-img/title_icon.svg" alt="shape">وبلاگ و اخبار</span><h2 class="sec-title">آخرین به روز رسانی اخبار و مقالات</h2>
+        </div>
+
+        <div class="slider-area">
+            <div class="swiper th-slider has-shadow swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden" id="blogSlider1" data-slider-options="{&quot;breakpoints&quot;:{&quot;0&quot;:{&quot;slidesPerView&quot;:1},&quot;576&quot;:{&quot;slidesPerView&quot;:&quot;1&quot;},&quot;768&quot;:{&quot;slidesPerView&quot;:&quot;2&quot;},&quot;992&quot;:{&quot;slidesPerView&quot;:&quot;2&quot;},&quot;1200&quot;:{&quot;slidesPerView&quot;:&quot;3&quot;}}}">
+                <div class="swiper-wrapper" id="swiper-wrapper-d9230436172ff6d5" aria-live="off" style="transition-duration: 0ms; transform: translate3d(2700px, 0px, 0px); transition-delay: 0ms;">
+
+
+                    @foreach (var item in Model.Select((value, index) => new { index, value }))
+                    {
+                        var value = item.value;
+                        var index = item.index;
+
+                        if (index == 0)
+                        {
+                            <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="1">
+                                <div class="blog-card">
+                                    <div class="blog-img"><img src="~/Content/Images/Blogs/@value.CoverImage" alt="blog image"></div>
+                                    <div class="blog-content">
+                                        <div class="blog-meta">
+                                            <a href="blog.html"><i class="far fa-user"></i>@value.Shop.Name</a><a href="blog.html"><i class="far fa-calendar"></i>@value.CreateDate.ToShamsi()</a>
+                                        </div>
+                                        <h3 class="box-title"><a href="blog-details.html">@value.Tittle</a></h3>
+                                        <a href="#" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (index == 1)
+                        {
+                            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="2 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="1">
+                                <div class="blog-card">
+                                    <div class="blog-img"><img src="~/Content/Images/Blogs/@value.CoverImage" alt="blog image"></div>
+                                    <div class="blog-content">
+                                        <div class="blog-meta">
+                                            <a href="blog.html"><i class="far fa-user"></i>@value.Shop.Name</a><a href="blog.html"><i class="far fa-calendar"></i>@value.CreateDate.ToShamsi()</a>
+                                        </div>
+                                        <h3 class="box-title"><a href="blog-details.html">@value.Tittle</a></h3>
+                                        <a href="#" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (index == 2)
+                        {
+                            <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="1">
+                                <div class="blog-card">
+                                    <div class="blog-img"><img src="~/Content/Images/Blogs/@value.CoverImage" alt="blog image"></div>
+                                    <div class="blog-content">
+                                        <div class="blog-meta">
+                                            <a href="blog.html"><i class="far fa-user"></i>@value.Shop.Name</a><a href="blog.html"><i class="far fa-calendar"></i>@value.CreateDate.ToShamsi()</a>
+                                        </div>
+                                        <h3 class="box-title"><a href="blog-details.html">@value.Tittle</a></h3>
+                                        <a href="#" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="swiper-slide" role="group" aria-label="2 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="1">
+                                <div class="blog-card">
+                                    <div class="blog-img"><img src="~/Content/Images/Blogs/@value.CoverImage" alt="blog image"></div>
+                                    <div class="blog-content">
+                                        <div class="blog-meta">
+                                            <a href="blog.html"><i class="far fa-user"></i>@value.Shop.Name</a><a href="blog.html"><i class="far fa-calendar"></i>@value.CreateDate.ToShamsi()</a>
+                                        </div>
+                                        <h3 class="box-title"><a href="blog-details.html">@value.Tittle</a></h3>
+                                        <a href="#" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+
+
+                    @*<div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="1">
+                        <div class="blog-card">
+                            <div class="blog-img"><img src="Content/Refrence/img/blog/blog_1_2.jpg" alt="blog image"></div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <a href="blog.html"><i class="far fa-user"></i>توسط میوه</a><a href="blog.html"><i class="far fa-calendar"></i>16 مارس 2023</a>
+                                </div>
+                                <h3 class="box-title"><a href="blog-details.html">تغذیه خود را با وعده های غذایی ارگانیک متحول کنید</a></h3>
+                                <a href="blog-details.html" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" role="group" aria-label="3 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="2">
+                        <div class="blog-card">
+                            <div class="blog-img"><img src="Content/Refrence/img/blog/blog_1_3.jpg" alt="blog image"></div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <a href="blog.html"><i class="far fa-user"></i>توسط میوه</a><a href="blog.html"><i class="far fa-calendar"></i>17 مارس 2023</a>
+                                </div>
+                                <h3 class="box-title"><a href="blog-details.html">با تغذیه ارگانیک سلامت خود را بهبود بخشید</a></h3>
+                                <a href="blog-details.html" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide" role="group" aria-label="4 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="3">
+                        <div class="blog-card">
+                            <div class="blog-img"><img src="Content/Refrence/img/blog/blog_1_4.jpg" alt="blog image"></div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <a href="blog.html"><i class="far fa-user"></i>توسط میوه</a><a href="blog.html"><i class="far fa-calendar"></i>19 مارس 2023</a>
+                                </div>
+                                <h3 class="box-title"><a href="blog-details.html">خوردن ارگانیک برای سلامتی بهتر عالی است</a></h3>
+                                <a href="blog-details.html" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide" role="group" aria-label="5 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="4">
+                        <div class="blog-card">
+                            <div class="blog-img"><img src="Content/Refrence/img/blog/blog_1_1.jpg" alt="blog image"></div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <a href="blog.html"><i class="far fa-user"></i>توسط میوه</a><a href="blog.html"><i class="far fa-calendar"></i>15 مارس 2023</a>
+                                </div>
+                                <h3 class="box-title"><a href="blog-details.html">عادات غذایی خود را با غذاهای ارگانیک تغییر دهید</a></h3>
+                                <a href="blog-details.html" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 6" style="width: 516px; margin-left: 24px;" data-swiper-slide-index="0">
+                        <div class="blog-card">
+                            <div class="blog-img"><img src="Content/Refrence/img/blog/blog_1_1.jpg" alt="blog image"></div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <a href="blog.html"><i class="far fa-user"></i>توسط میوه</a><a href="blog.html"><i class="far fa-calendar"></i>15 مارس 2023</a>
+                                </div>
+                                <h3 class="box-title"><a href="blog-details.html">عادات غذایی خود را با غذاهای ارگانیک تغییر دهید</a></h3>
+                                <a href="blog-details.html" class="th-btn btn-sm style4">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>*@
+
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+
+            <button data-slider-prev="#blogSlider1" class="slider-arrow slider-prev"><i class="far fa-arrow-left"></i></button><button data-slider-next="#blogSlider1" class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
+        </div>
+    </div>
+</section> 

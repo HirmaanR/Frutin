@@ -94,7 +94,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Images\Slider\new.png" />
+    <Content Include="Content\Images\Blogs\1920x1080.png" />
+    <Content Include="Content\Images\Blogs\blog.png" />
+    <Content Include="Content\Images\Blogs\new.png" />
     <Content Include="Content\Refrence\bootstrap-theme.css" />
     <Content Include="Content\Refrence\bootstrap-theme.min.css" />
     <Content Include="Content\Refrence\bootstrap.css" />
@@ -828,11 +830,14 @@
     <Compile Include="Areas\Admin\Controllers\SlidersController.cs" />
     <Compile Include="Areas\Admin\Controllers\TagsController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\_FooterPartialController.cs" />
-    <Compile Include="Controllers\_HeaderPartialController.cs" />
-    <Compile Include="Controllers\_SliderPartialController.cs" />
-    <Compile Include="Controllers\_SubscribeFormController.cs" />
+    <Compile Include="Controllers\HomePartial\_BlogsPartialController.cs" />
+    <Compile Include="Controllers\HomePartial\_FooterPartialController.cs" />
+    <Compile Include="Controllers\HomePartial\_HeaderPartialController.cs" />
+    <Compile Include="Controllers\HomePartial\_ProductPartialController.cs" />
+    <Compile Include="Controllers\HomePartial\_SliderPartialController.cs" />
+    <Compile Include="Controllers\HomePartial\_SubscribeFormController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -955,6 +960,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\_SliderPartial\Index.cshtml" />
     <Content Include="Views\_SubscribeForm\Index.cshtml" />
+    <Content Include="Views\_ProductPartial\Index.cshtml" />
+    <Content Include="Views\_BlogsPartial\Index.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -966,6 +974,11 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Content\Images\Categories\" />
+    <Folder Include="Content\Images\Products\" />
+    <Folder Include="Content\Images\Shops\" />
+    <Folder Include="Content\Images\Slider\" />
+    <Folder Include="Content\Images\Users\" />
     <Folder Include="Models\" />
     <Folder Include="Views\SendEmail\" />
   </ItemGroup>
