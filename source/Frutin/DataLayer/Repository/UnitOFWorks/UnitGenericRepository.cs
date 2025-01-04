@@ -262,6 +262,22 @@ namespace DataLayer
 
         // End about view model repository 
 
+        // contact model repository : 
+
+        private GenericRepository<Contact> _contactRepository;
+        public GenericRepository<Contact> ContactRepository
+        {
+            get
+            {
+                if (_contactRepository == null)
+                    _contactRepository = new GenericRepository<Contact>(db);
+
+                return _contactRepository;
+            }
+        }
+
+        // end contact model repository 
+
 
         public void Dispose()
         {

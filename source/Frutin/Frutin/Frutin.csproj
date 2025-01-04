@@ -116,6 +116,7 @@
     <Content Include="Content\Refrence\custom\bootstrap.js" />
     <Content Include="Content\Refrence\custom\bootstrap.min.css" />
     <Content Include="Content\Refrence\custom\bootstrap.min.js" />
+    <Content Include="Content\Refrence\custom\CustomStyle.css" />
     <Content Include="Content\Refrence\fonts\fontawesome\brands.svg" />
     <Content Include="Content\Refrence\fonts\fontawesome\duotone.svg" />
     <Content Include="Content\Refrence\fonts\fontawesome\light.svg" />
@@ -831,6 +832,7 @@
     <Compile Include="Areas\Admin\Controllers\TagsController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomePartial\_BlogsPartialController.cs" />
     <Compile Include="Controllers\HomePartial\_FooterPartialController.cs" />
@@ -963,6 +965,7 @@
     <Content Include="Views\_ProductPartial\Index.cshtml" />
     <Content Include="Views\_BlogsPartial\Index.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

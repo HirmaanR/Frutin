@@ -111,12 +111,21 @@
     <Compile Include="Migrations\202412310739384_edit_shopModel.Designer.cs">
       <DependentUpon>202412310739384_edit_shopModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202501041624547_init_contactModel.cs" />
+    <Compile Include="Migrations\202501041624547_init_contactModel.Designer.cs">
+      <DependentUpon>202501041624547_init_contactModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202501041642535_edit_contactModel.cs" />
+    <Compile Include="Migrations\202501041642535_edit_contactModel.Designer.cs">
+      <DependentUpon>202501041642535_edit_contactModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\BlogTag.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\NewsEmail.cs" />
+    <Compile Include="Models\SiteSetting\Contact\Contact.cs" />
     <Compile Include="Models\SiteSetting\Footer\FooterContent.cs" />
     <Compile Include="Models\SiteSetting\Header\ChildHeaderMenu.cs" />
     <Compile Include="Models\SiteSetting\Header\HeaderMenu.cs" />
@@ -187,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202412310739384_edit_shopModel.resx">
       <DependentUpon>202412310739384_edit_shopModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202501041624547_init_contactModel.resx">
+      <DependentUpon>202501041624547_init_contactModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202501041642535_edit_contactModel.resx">
+      <DependentUpon>202501041642535_edit_contactModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

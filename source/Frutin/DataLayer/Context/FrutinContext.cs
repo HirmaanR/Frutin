@@ -47,6 +47,12 @@ namespace DataLayer
         public DbSet<Slider> Slider { get; set; }
         // end slider
 
+        // contact model : 
+
+        public DbSet<Contact> Contact { get; set; }
+
+        // end contact model 
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
