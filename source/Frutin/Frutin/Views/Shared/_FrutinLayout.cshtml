@@ -58,15 +58,15 @@
         @Html.Action("Index", "_FooterPartial")
         @RenderSection("footer", required: false)
     </footer>
-    <script src="Content/Refrence/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="Content/Refrence/js/swiper-bundle.min.js"></script>
-    <script src="Content/Refrence/js/bootstrap.min.js"></script>
-    <script src="Content/Refrence/js/jquery.magnific-popup.min.js"></script>
-    <script src="Content/Refrence/js/jquery.counterup.min.js"></script>
-    <script src="Content/Refrence/js/jquery-ui.min.js"></script>
-    <script src="Content/Refrence/js/imagesloaded.pkgd.min.js"></script>
-    <script src="Content/Refrence/js/isotope.pkgd.min.js"></script>
-    <script src="Content/Refrence/js/main.js"></script>
+    <script src="~/Content/Refrence/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="~/Content/Refrence/js/swiper-bundle.min.js"></script>
+    <script src="~/Content/Refrence/js/bootstrap.min.js"></script>
+    <script src="~/Content/Refrence/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Content/Refrence/js/jquery.counterup.min.js"></script>
+    <script src="~/Content/Refrence/js/jquery-ui.min.js"></script>
+    <script src="~/Content/Refrence/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/Content/Refrence/js/isotope.pkgd.min.js"></script>
+    <script src="~/Content/Refrence/js/main.js"></script>
     <script src="~/Content/Refrence/custom/bootstrap.js"></script>
     <script src="~/Content/Refrence/custom/bootstrap.min.js"></script>
     @* for _SubscribePartial post action *@
@@ -87,7 +87,8 @@
                     alert("خطایی رخ داده است. لطفاً دوباره تلاش کنید.");
                 }
             });
-        });</script>
+        });
+    </script>
 
     @RenderSection("script", required: false)
 </body>

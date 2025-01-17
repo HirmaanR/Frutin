@@ -1,0 +1,24 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+
+@{
+    ViewBag.Title = "Not Found!";
+    Layout = "~/Views/Shared/_FrutinLayout.cshtml";
+}
+
+@if (Model != null)
+{
+    <section class="space">
+        <div class="container">
+            <div class="error-img"><img src="Content/Refrence/img/theme-img/error.svg" alt="404 image"></div>
+            <div class="error-content">
+                <h2 class="error-title">
+                    <span class="text-theme"> اوه!</span>صفحه یافت نشد
+                </h2>
+                <p class="error-text">اوه! صفحه مورد نظر شما وجود ندارد. ممکن است منتقل شده یا حذف شده باشد. لطفا بررسی کنید و دوباره امتحان کنید.</p>
+                <a href="home-organic-farm.html" class="th-btn"><i class="fal fa-home me-2"></i>بازگشت به خانه</a>
+            </div>
+        </div>
+    </section>
+
+}

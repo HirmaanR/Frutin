@@ -28,3 +28,4 @@ D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.d
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.pdb
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_contactModel.resources
 D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.edit_contactModel.resources
+D:\Programming\projects\Frutin-new\source\Frutin\DataLayer\obj\Debug\DataLayer.Migrations.init_FaqModel.resources

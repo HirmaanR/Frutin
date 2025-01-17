@@ -805,16 +805,24 @@
     <Content Include="Areas\Admin\Views\Sliders\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Sliders\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Sliders\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminFaqs\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminFaqs\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminFaqs\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminFaqs\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminFaqs\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminDashbordController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminFaqsController.cs" />
     <Compile Include="Areas\Admin\Controllers\BlogsController.cs" />
     <Compile Include="Areas\Admin\Controllers\BlogTagsController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
@@ -832,7 +840,9 @@
     <Compile Include="Areas\Admin\Controllers\TagsController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\BlogsController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\FaqController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomePartial\_BlogsPartialController.cs" />
     <Compile Include="Controllers\HomePartial\_FooterPartialController.cs" />
@@ -840,6 +850,7 @@
     <Compile Include="Controllers\HomePartial\_ProductPartialController.cs" />
     <Compile Include="Controllers\HomePartial\_SliderPartialController.cs" />
     <Compile Include="Controllers\HomePartial\_SubscribeFormController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -966,6 +977,10 @@
     <Content Include="Views\_BlogsPartial\Index.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Blogs\Index.cshtml" />
+    <Content Include="Views\Blogs\BlogDetail.cshtml" />
+    <Content Include="Views\ErrorController\NotFound.cshtml" />
+    <Content Include="Views\Faq\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -977,6 +992,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Content\Images\Blogs\DesImg\" />
     <Folder Include="Content\Images\Categories\" />
     <Folder Include="Content\Images\Products\" />
     <Folder Include="Content\Images\Shops\" />

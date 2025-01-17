@@ -1,0 +1,104 @@
+﻿@model IEnumerable<DataLayer.Blog>
+@using UtilityLayer
+
+@{
+    ViewBag.Title = "وبلاگ ها";
+    Layout = "~/Views/Shared/_FrutinLayout.cshtml";
+}
+<div class="breadcumb-wrapper background-image" style="background-image: url(&quot;Content/Refrence/img/bg/breadcumb-bg.jpg&quot;)">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h1 class="breadcumb-title">@ViewBag.Title</h1>
+            <ul class="breadcumb-menu">
+                <li><a href="home-organic-farm.html">صفحه اصلی</a></li>
+                <li>@ViewBag.Title</li>
+            </ul>
+        </div>
+    </div>
+</div> @* header title *@
+
+<section class="th-blog-wrapper space-top space-extra-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-8 col-lg-7">
+
+                @foreach (var item in Model)
+                {
+                    <div class="th-blog blog-single has-post-thumbnail">
+                        <div class="blog-img"><a href="Blogs/BlogDetail/@item.BlogID"><img src="~/Content/Images/Blogs/@item.CoverImage" alt="Blog cover"></a></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a class="author" href="blog.html"><i class="far fa-user"></i>@item.Shop.Name</a><a href="blog.html"><i class="far fa-calendar"></i>@item.CreateDate.ToShamsi()</a><a href="blog-details.html"><i class="far fa-comments"></i>نظرات : @item.Comments.Count()</a>
+                            </div>
+                            <h2 class="blog-title"><a href="blog-details.html">@item.Tittle</a></h2>
+                            <p class="blog-text">@item.ShortDes</p>
+                            <a href="@Url.Action("BlogDetail","Blogs",new { blogid = item.BlogID})" class="th-btn btn-sm">ادامه مطلب<i class="fas fa-chevrons-right ms-2"></i></a>
+                        </div>
+                    </div>
+                }
+
+
+                <div class="th-pagination text-center">
+                    <ul>
+                        <li><a href="blog.html">1</a></li>
+                        <li><a href="blog.html">2</a></li>
+                        <li><a href="blog.html">3</a></li>
+                        <li><a href="blog.html"><i class="far fa-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-xxl-4 col-lg-5">
+                <aside class="sidebar-area">
+                    <div class="widget widget_search ">
+
+                        <form class="search-form">
+                            @* search input *@
+                            <input type="text" placeholder="کلمه کلیدی را وارد کنید"><button type="submit"><i class="far fa-search"></i></button>
+                        </form>
+
+                    </div>
+                    @* categories *@
+                    <div class="widget widget_categories ">
+                        <h3 class="widget_title">دسته بندی ها</h3>
+                        <ul>
+
+                            @foreach (var item in Model)
+                            {
+                                <li>
+                                    <a href="blog.html">@item.Category.Tittle</a>
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+
+                    @* last blogs *@
+                    <div class="widget ">
+                        <h3 class="widget_title">پستهای اخیر</h3>
+                        <div class="recent-post-wrap">
+
+                            @foreach (var item in Model.Select((value, index) => new { index, value }))
+                            {
+                                var value = item.value;
+                                var index = item.index;
+
+                                if (index <= 3)
+                                {
+                                    <div class="recent-post">
+                                        <div class="media-img"><a href=""><img src="~/Content/Images/Blogs/@value.CoverImage" alt="Blog cover"></a></div>
+                                        <div class="media-body">
+                                            <h4 class="post-title"><a class="text-inherit" href="">@value.Tittle</a></h4>
+                                            <div class="recent-post-meta"><a href=""><i class="far fa-calendar"></i>@value.CreateDate.ToShamsi()</a></div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>

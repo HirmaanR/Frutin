@@ -279,6 +279,20 @@ namespace DataLayer
         // end contact model repository 
 
 
+
+        private GenericRepository<Faq> _faqRepository;
+        public GenericRepository<Faq> FaqRepository
+        {
+            get
+            {
+                if (_faqRepository == null)
+                    _faqRepository = new GenericRepository<Faq>(db);
+
+                return _faqRepository;
+            }
+        }
+
+
         public void Dispose()
         {
             db.Dispose();

@@ -119,6 +119,10 @@
     <Compile Include="Migrations\202501041642535_edit_contactModel.Designer.cs">
       <DependentUpon>202501041642535_edit_contactModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202501171819592_init_FaqModel.cs" />
+    <Compile Include="Migrations\202501171819592_init_FaqModel.Designer.cs">
+      <DependentUpon>202501171819592_init_FaqModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\BlogTag.cs" />
@@ -126,6 +130,7 @@
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\NewsEmail.cs" />
     <Compile Include="Models\SiteSetting\Contact\Contact.cs" />
+    <Compile Include="Models\SiteSetting\Faq\Faq.cs" />
     <Compile Include="Models\SiteSetting\Footer\FooterContent.cs" />
     <Compile Include="Models\SiteSetting\Header\ChildHeaderMenu.cs" />
     <Compile Include="Models\SiteSetting\Header\HeaderMenu.cs" />
@@ -202,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202501041642535_edit_contactModel.resx">
       <DependentUpon>202501041642535_edit_contactModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202501171819592_init_FaqModel.resx">
+      <DependentUpon>202501171819592_init_FaqModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

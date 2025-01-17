@@ -1,0 +1,136 @@
+﻿
+@model IEnumerable<DataLayer.Blog>
+
+@using UtilityLayer
+
+
+@{
+    ViewBag.Title = "جزئیات وبلاگ";
+    Layout = "~/Views/Shared/_FrutinLayout.cshtml";
+}
+
+
+<div class="breadcumb-wrapper background-image" style="background-image: url(&quot;Content/Refrence/img/bg/breadcumb-bg.jpg&quot;);">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h1 class="breadcumb-title">@ViewBag.Title</h1>
+            <ul class="breadcumb-menu">
+                <li><a href="home-organic-farm.html">صفحه اصلی</a></li>
+                <li>@ViewBag.Title</li>
+            </ul>
+        </div>
+    </div>
+</div> @* header title *@
+
+<section class="th-blog-wrapper space-top space-extra-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-8 col-lg-7">
+
+                @foreach (var item in Model)
+                {
+                    if (item.BlogID == ViewBag.blogID)
+                    {
+                        <div class="th-blog blog-single">
+                            <div class="blog-img"><img src="~/Content/Images/Blogs/@item.CoverImage" alt="Blog Image"></div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <a class="author" href=""><i class="far fa-user"></i>@item.Shop.Name</a><a href="blog.html"><i class="far fa-calendar"></i>@item.CreateDate.ToShamsi()</a><a href="blog-details.html"><i class="far fa-comments"></i>نظرات : @item.Comments.Count()</a>
+                                </div>
+                                <h2 class="blog-title">@item.Tittle</h2>
+                                <p>@item.ShortDes</p>
+
+                                <p>@item.Text</p>
+
+                                <div class="row mt-15">
+                                    <div class="col-md-6 mb-4"><img class="w-100 rounded-20" src="~/Content/Images/Blogs/DesImg/@item.DesImage" alt="Blog description Image"></div>
+                                </div>
+
+                                <div class="share-links clearfix ">
+                                    <div class="row justify-content-between">
+                                        <div class="col-sm-auto">
+                                            <span class="share-links-title">برچسب ها:</span><div class="tagcloud">
+                                                @* blog tags *@
+
+                                                @foreach (var tag in item.BlogTags.ToList())
+                                                {
+                                                    <a href="#">@tag.Tag.Tittle</a>
+                                                }
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+
+                @* layout pages *@
+                <div class="th-pagination text-center">
+                    <ul>
+                        <li><a href="blog.html">1</a></li>
+                        <li><a href="blog.html">2</a></li>
+                        <li><a href="blog.html">3</a></li>
+                        <li><a href="blog.html"><i class="far fa-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+                @* end layout pages *@
+
+            </div>
+            <div class="col-xxl-4 col-lg-5">
+                <aside class="sidebar-area">
+                    <div class="widget widget_search ">
+
+                        <form class="search-form">
+                            @* search input *@
+                            <input type="text" placeholder="کلمه کلیدی را وارد کنید"><button type="submit"><i class="far fa-search"></i></button>
+                        </form>
+
+                    </div>
+                    @* categories *@
+                    <div class="widget widget_categories ">
+                        <h3 class="widget_title">دسته بندی ها</h3>
+                        <ul>
+
+                            @foreach (var item in Model)
+                            {
+                                <li>
+                                    <a href="blog.html">@item.Category.Tittle</a>
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+
+                    @* last blogs *@
+                    <div class="widget ">
+                        <h3 class="widget_title">پستهای اخیر</h3>
+                        <div class="recent-post-wrap">
+
+                            @foreach (var item in Model.Select((value, index) => new { index, value }))
+                            {
+                                var value = item.value;
+                                var index = item.index;
+
+                                if (index <= 3)
+                                {
+                                    <div class="recent-post">
+                                        <div class="media-img"><a href=""><img src="~/Content/Images/Blogs/@value.CoverImage" alt="Blog cover"></a></div>
+                                        <div class="media-body">
+                                            <h4 class="post-title"><a class="text-inherit" href="">@value.Tittle</a></h4>
+                                            <div class="recent-post-meta"><a href=""><i class="far fa-calendar"></i>@value.CreateDate.ToShamsi()</a></div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+

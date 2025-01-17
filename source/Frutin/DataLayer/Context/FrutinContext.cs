@@ -53,6 +53,9 @@ namespace DataLayer
 
         // end contact model 
 
+
+        public DbSet<Faq> Faq { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
